@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fun Animal Facts</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f0f0f0;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Fun Facts About Wild Animals</h1>
+    <ul id="fact-list">
+      </ul>
+  </div>
+  <script>
+    const factList = document.getElementById("fact-list");
+
+    const animalFacts = {
+      "Fun Facts About Wild Animals": [
+        {
+          "name": "Pufferfish",
+          "hilarious_habit": "Puffs up like a spiky balloon when threatened"
+        },
+        {
+          "name": "Quokkas",
+          "hilarious_habit": "Known for their 'smiles' and lack of fear toward humans, often approaching people and even photobombing pictures"
+        },
+        {
+          "name": "Meerkats",
+          "hilarious_habit": "Take turns standing upright as lookouts, often appearing to be admiring the view or striking a pose"
+        },
+        {
+          "name": "Otters",
+          "hilarious_habit": "Hold hands while sleeping so they don't drift apart and love to juggle rocks and pebbles"
+        },
+        {
+          "name": "Slow Loris",
+          "hilarious_habit": "Their slow, deliberate movements and big eyes make them look adorably clumsy"
+        },
+        {
+          "name": "Capybaras",
+          "hilarious_habit": "Surprisingly chill and often become friends with other animals, even letting birds sit on their heads"
+        },
+        {
+          "name": "Kea (Parrot)",
+          "hilarious_habit": "Notorious for their mischievous antics, like stealing tourists' belongings"
+        },
+        {
+          "name": "Japanese Macaques (Snow Monkeys)",
+          "hilarious_habit": "Enjoy relaxing in natural hot springs, especially during winter"
+        },
+        {
+          "name": "Pangolins",
+          "hilarious_habit": "When threatened, they curl up into a near-perfect ball, relying on their tough scales for protection"
+        },
+        {
+          "name": "Elephants",
+          "hilarious_habit": "Can be surprisingly playful and even have a great sense of humor, and their trunks are surprisingly versatile"
+        }
+      ]
+    };
+
+    const facts = animalFacts["Fun Facts About Wild Animals"];
+
+    facts.forEach(fact => {
+      const listItem = document.createElement("li");
+      listItem.innerHTML = `<strong>${fact.name}:</strong> ${fact.hilarious_habit}`;
+      factList.appendChild(listItem);
+    });
+  </script>
+</body>
+</html>
+
