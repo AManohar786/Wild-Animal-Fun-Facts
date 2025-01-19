@@ -39,11 +39,9 @@
     <h1>Fun Facts About Wild Animals</h1>
     <ul id="fact-list">
       </ul>
-    <button id="new-fact-button">New Facts</button> 
   </div>
   <script>
     const factList = document.getElementById("fact-list");
-    const newFactButton = document.getElementById("new-fact-button");
 
     const animalFacts = {
       "Fun Facts About Wild Animals": [
@@ -90,23 +88,13 @@
       ]
     };
 
-    function displayFacts() {
-      factList.innerHTML = ''; // Clear previous facts
+    const facts = animalFacts["Fun Facts About Wild Animals"];
 
-      const facts = animalFacts["Fun Facts About Wild Animals"];
-      facts.forEach(fact => {
-        const listItem = document.createElement("li");
-        listItem.innerHTML = `<strong>${fact.name}:</strong> ${fact.hilarious_habit}`;
-        factList.appendChild(listItem);
-      });
-    }
-
-    // Initial display of facts
-    displayFacts();
-
-    // Event listener for the button to display new facts 
-    newFactButton.addEventListener("click", displayFacts);
-
+    facts.forEach(fact => {
+      const listItem = document.createElement("li");
+      listItem.innerHTML = `<strong>${fact.name}:</strong> ${fact.hilarious_habit}`;
+      factList.appendChild(listItem);
+    });
   </script>
 </body>
 </html>
